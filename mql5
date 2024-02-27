@@ -1,0 +1,120 @@
+mql5
+//+------------------------------------------------------------------+
+//|                                              ICT Template MT5     |
+//|                                           forexroboteasy.com     |
+//|                                         Forex Robot Easy Team     |
+//|                                         https://forexroboteasy.com|
+//+------------------------------------------------------------------+
+
+// Global variables for customization
+color ChartColor = clrWhite; // Color of the chart
+int ChartWidth = 1; // Width of the chart lines
+ENUM_LINE_STYLE ChartLineStyle = STYLE_SOLID; // Line style of the chart
+int MaxValue = 100; // Maximum value for customization
+
+//+------------------------------------------------------------------+
+//| Expert initialization function                                   |
+//+------------------------------------------------------------------+
+int OnInit()
+{
+    // Set chart properties
+    ChartSetInteger(0, CHART_COLOR_FOREGROUND, ChartColor);
+    ChartSetInteger(0, CHART_WIDTH, ChartWidth);
+    ChartSetInteger(0, CHART_LINE_STYLE, ChartLineStyle);
+
+    return(INIT_SUCCEEDED);
+}
+
+//+------------------------------------------------------------------+
+//| Expert deinitialization function                                 |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+{
+    // Cleanup and perform any necessary deinitialization tasks
+}
+
+//+------------------------------------------------------------------+
+//| Expert tick function                                             |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+    // Update essential ICT elements based on market trends and movements
+    UpdateICTElements();
+
+    // Check for trading opportunities
+    if (IsScalping())
+    {
+        // Execute scalping strategy
+        ExecuteScalpingStrategy();
+    }
+    else if (IsDayTrading())
+    {
+        // Execute day trading strategy
+        ExecuteDayTradingStrategy();
+    }
+    else if (IsSwingTrading())
+    {
+        // Execute swing trading strategy
+        ExecuteSwingTradingStrategy();
+    }
+}
+
+//+------------------------------------------------------------------+
+//| Update essential ICT elements                                     |
+//+------------------------------------------------------------------+
+void UpdateICTElements()
+{
+    // Implement code to update essential ICT elements
+    // based on market trends and movements
+}
+
+//+------------------------------------------------------------------+
+//| Check if scalping trading style is selected                      |
+//+------------------------------------------------------------------+
+bool IsScalping()
+{
+    // Implement code to check if scalping trading style is selected
+    return true;
+}
+
+//+------------------------------------------------------------------+
+//| Execute scalping trading strategy                                |
+//+------------------------------------------------------------------+
+void ExecuteScalpingStrategy()
+{
+    // Implement code to execute scalping trading strategy
+}
+
+//+------------------------------------------------------------------+
+//| Check if day trading trading style is selected                    |
+//+------------------------------------------------------------------+
+bool IsDayTrading()
+{
+    // Implement code to check if day trading trading style is selected
+    return false;
+}
+
+//+------------------------------------------------------------------+
+//| Execute day trading trading strategy                              |
+//+------------------------------------------------------------------+
+void ExecuteDayTradingStrategy()
+{
+    // Implement code to execute day trading trading strategy
+}
+
+//+------------------------------------------------------------------+
+//| Check if swing trading trading style is selected                  |
+//+------------------------------------------------------------------+
+bool IsSwingTrading()
+{
+    // Implement code to check if swing trading trading style is selected
+    return false;
+}
+
+//+------------------------------------------------------------------+
+//| Execute swing trading trading strategy                            |
+//+------------------------------------------------------------------+
+void ExecuteSwingTradingStrategy()
+{
+    // Implement code to execute swing trading trading strategy
+}
